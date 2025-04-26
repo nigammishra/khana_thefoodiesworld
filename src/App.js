@@ -1,4 +1,7 @@
+import './App.css';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+
+// Components
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 
@@ -10,7 +13,7 @@ import ShopDetails from "./pages/ShopDetails";
 import Recipes from "./pages/Recipes";
 import Contacts from "./pages/Contact";
 
-// Account Details Pages
+// Account Pages
 import SignIn from "./pages/AccountDetails/Signin";
 import SignUp from "./pages/AccountDetails/Signup";
 import ForgotPassword from "./pages/AccountDetails/ForgotPassword";
@@ -24,28 +27,32 @@ import WishlistItems from "./pages/AccountDetails/WishlistItems";
 function App() {
   return (
     <Router>
+      {/* Header will show on every page */}
       <Header />
 
+      {/* All Routes */}
       <Routes>
-        <Route path="/khana_thefoodiesworld/" element={<Home />} />
+        {/* Main Pages */}
+        <Route path="/khana_thefoodiesworld" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/menu" element={<Menu />} />
         <Route path="/shopdetails" element={<ShopDetails />} />
         <Route path="/recipes" element={<Recipes />} />
         <Route path="/contacts" element={<Contacts />} />
-        
-        {/* Account Details Routes */}
+
+        {/* Account Pages (Nested under /account) */}
         <Route path="/account/signin" element={<SignIn />} />
         <Route path="/account/signup" element={<SignUp />} />
-        <Route path="/account/forgotpassword" element={<ForgotPassword />} />
-        <Route path="/account/ordersdetails" element={<OrdersDetails />} />
+        <Route path="/account/forgot-password" element={<ForgotPassword />} />
+        <Route path="/account/orders-details" element={<OrdersDetails />} />
         <Route path="/account/settings" element={<Settings />} />
-        <Route path="/account/addressdetails" element={<AddressDetails />} />
-        <Route path="/account/paymentmethods" element={<PaymentMethods />} />
+        <Route path="/account/address-details" element={<AddressDetails />} />
+        <Route path="/account/payment-methods" element={<PaymentMethods />} />
         <Route path="/account/notifications" element={<Notifications />} />
-        <Route path="/account/wishlistitems" element={<WishlistItems />} />
+        <Route path="/account/wishlist-items" element={<WishlistItems />} />
       </Routes>
 
+      {/* Footer will show on every page */}
       <Footer />
     </Router>
   );
