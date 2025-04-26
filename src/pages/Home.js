@@ -1,17 +1,9 @@
-import React from 'react';
-import './Home.css';
+import React from 'react'
 
 const Home = () => {
   return (
-    <div className="under-construction">
-      <div className="content">
-        <h1>🚧 Under Construction 🚧</h1>
-        <p>We are working very hard to bring you a better experience.</p>
-        <div className="loader"></div>
-        <p className="thankyou">Thank you for your patience!</p>
-      </div>
-    </div>
-  );
-};
+    <div>Home</div>
+  )
+}
 
-export default Home;
+export default Home

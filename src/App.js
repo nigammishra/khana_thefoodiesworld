@@ -33,7 +33,7 @@ function App() {
       {/* All Routes */}
       <Routes>
         {/* Main Pages */}
-        <Route path="/thefoodiesworld/" element={<Home />} />
+        <Route path="/khana_thefoodiesworld/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/menu" element={<Menu />} />
         <Route path="/shopdetails" element={<ShopDetails />} />
