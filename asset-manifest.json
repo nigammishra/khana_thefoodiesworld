@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/khana-thefoodiesworld/static/css/main.e6c13ad2.css",
-    "main.js": "/khana-thefoodiesworld/static/js/main.db193d64.js",
+    "main.css": "/khana-thefoodiesworld/static/css/main.5ab647b7.css",
+    "main.js": "/khana-thefoodiesworld/static/js/main.10fdfe29.js",
     "static/js/453.30826837.chunk.js": "/khana-thefoodiesworld/static/js/453.30826837.chunk.js",
     "index.html": "/khana-thefoodiesworld/index.html",
-    "main.e6c13ad2.css.map": "/khana-thefoodiesworld/static/css/main.e6c13ad2.css.map",
-    "main.db193d64.js.map": "/khana-thefoodiesworld/static/js/main.db193d64.js.map",
+    "main.5ab647b7.css.map": "/khana-thefoodiesworld/static/css/main.5ab647b7.css.map",
+    "main.10fdfe29.js.map": "/khana-thefoodiesworld/static/js/main.10fdfe29.js.map",
     "453.30826837.chunk.js.map": "/khana-thefoodiesworld/static/js/453.30826837.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.e6c13ad2.css",
-    "static/js/main.db193d64.js"
+    "static/css/main.5ab647b7.css",
+    "static/js/main.10fdfe29.js"
   ]
 }
