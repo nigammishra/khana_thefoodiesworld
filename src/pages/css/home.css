@@ -80,7 +80,7 @@
     display: flex;
     align-items: center;
     flex-direction: column;
-    background: url("https://i.postimg.cc/vZgq6RgJ/about-bg.jpg") no-repeat center;
+    /* background: url("") no-repeat center; */
     background-size: cover;
     padding: 20px;
   }
@@ -478,5 +478,59 @@
   .btn-add-to-cart:active {
     background-color: #d2593b;
     transform: translateY(0);
+  }
+  
+
+  .show-more-button{
+    padding: 7px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 25px;
+    background-color: #ff7b54;
+    color: #fff;
+  }
+  .show-more-button {
+    padding: 7px 15px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 25px;
+    background-color: #ff7b54;
+    color: #fff;
+    cursor: pointer;
+    font-size: 16px; /* Set font size */
+    letter-spacing: 2px; /* Adds space between letters */
+    font-weight: bold; /* Makes text bold */
+    text-transform: uppercase; /* Makes text uppercase */
+    transition: background-color 0.3s ease, transform 0.3s ease, letter-spacing 0.3s ease; /* Smooth transitions */
+  }
+  
+  .show-more-button:hover {
+    background-color: #ff5e3a;
+    transform: scale(1.05);
+    letter-spacing: 4px; /* Increases letter spacing on hover */
+    animation: textShake 0.5s ease-in-out; /* Adds an animation when hovered */
+  }
+  
+  /* Animated Text Shake Effect */
+  @keyframes textShake {
+    0% {
+      transform: translateY(0);
+    }
+    25% {
+      transform: translateY(-5px);
+    }
+    50% {
+      transform: translateY(5px);
+    }
+    75% {
+      transform: translateY(-5px);
+    }
+    100% {
+      transform: translateY(0);
+    }
   }
   

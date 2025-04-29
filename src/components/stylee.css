@@ -1,0 +1,160 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+
+/* body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #fc686d;
+  font-family: "Poppins", sans-serif;
+} */
+.background-container {
+    max-width: 1660px;
+    height: 60vh;
+    width: 100%;
+    margin: 0 auto;
+    padding: 100px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), url("../images/food-doodles.jpg") no-repeat center center;
+    background-size: cover;
+    background-attachment: fixed;
+    /* border-radius: 20px; */
+  }
+  .food-content h2 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 2.5rem;
+  }
+  
+  .food-content p {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.1rem;
+    color: #555;
+  }
+  
+  .next-dish-btn {
+    border-radius: 30px;
+    font-size: 1rem;
+    box-shadow: 0 8px 15px rgba(255, 0, 0, 0.2);
+    transition: all 0.3s ease;
+  }
+  
+  .next-dish-btn:hover {
+    background-color: #e63946;
+    box-shadow: 0 12px 25px rgba(255, 0, 0, 0.4);
+  }
+  
+  
+  /* Responsive for tablets */
+  @media (max-width: 992px) {
+    .background-container {
+      padding: 15px;
+      border-radius: 15px;
+    }
+  }
+  
+  /* Responsive for mobile */
+  @media (max-width: 576px) {
+    .background-container {
+      padding: 10px;
+      border-radius: 10px;
+      height: 100vh;
+    }
+  }
+  
+.carousel-wrapper {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  top: 50px;
+}
+
+.carousel-card {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 300px;
+  height: 300px;
+  background: #fff;
+  border-radius: 4px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+              box-shadow 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  transform-origin: top;
+  overflow: hidden;
+}
+
+.carousel-image {
+  width: 100%;
+  height: 180px;
+  overflow: hidden;
+}
+
+.carousel-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.carousel-detail {
+  padding: 15px 20px;
+}
+
+.carousel-detail h3 {
+  margin: 0;
+  font-size: 15px;
+}
+
+.carousel-stars i {
+  font-size: 10px;
+  color: #fc686d;
+}
+
+.carousel-detail p {
+  font-size: 13px;
+  font-weight: 500;
+  color: #868686;
+}
+
+.carousel-next {
+  position: absolute;
+  top: 53%;
+  right: 4%;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.carousel-next i {
+  background-color: #fc686d;
+  height: 40px;
+  width: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  border-radius: 50%;
+}
+
+.carousel-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+}
+
+/* Fade-in effect when the carousel card loads */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.carousel-card {
+  animation: fadeIn 1s ease-out;
+}
