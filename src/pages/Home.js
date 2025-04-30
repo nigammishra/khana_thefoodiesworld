@@ -1,8 +1,10 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import "../../src/pages/css/home.css";
 import { FaEye, FaHeart } from "react-icons/fa";
 import CardCarousel3D from "../components/CardCarousel3D";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 // image import section
 
@@ -22,6 +24,13 @@ import Partners from "../components/Partners";
 import FAQ from "../components/Faq";
 
 const Home = () => {
+  useEffect(() => {
+    AOS.init({
+      duration: 800,
+      easing: "ease-in-out",
+      once: true,
+    });
+  }, []);
   const [selectedProduct, setSelectedProduct] = useState(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [showMore, setShowMore] = useState(false); // State to toggle Show More/Show Less
@@ -158,34 +167,40 @@ const Home = () => {
           </p>
 
           <div className="grid-gallery-unique">
-            {products
-              .slice(0, showMore ? products.length : 3)
-              .map((product, index) => (
-                <div className="card-box-unique" key={index}>
-                  <div
-                    className="icon-wrapper-unique"
-                    onClick={() => openModal(product)}
-                  >
-                    <FaEye className="view-icon-unique" />
-                  </div>
-                  <img
-                    className="card-image-unique"
-                    src={product.images[0]}
-                    alt={product.title}
-                  />
-                  <div className="card-details-unique">
-                    <div className="card-header-unique">
-                      <h4 className="card-title-unique">{product.title}</h4>
-                      <span className="card-price-unique">{product.price}</span>
-                    </div>
-                    <p className="card-description-unique">{product.desc}</p>
-                    <div className="wishlist-wrapper-unique">
-                      <FaHeart className="wishlist-icon-unique" />
-                    </div>
-                  </div>
-                </div>
-              ))}
+  {products
+    .slice(0, showMore ? products.length : 3)
+    .map((product, index) => (
+      <div
+        className="card-box-unique"
+        key={index}
+        data-aos="zoom-in"
+        data-aos-delay={index * 100}
+      >
+        <div
+          className="icon-wrapper-unique"
+          onClick={() => openModal(product)}
+        >
+          <FaEye className="view-icon-unique" />
+        </div>
+        <img
+          className="card-image-unique"
+          src={product.images[0]}
+          alt={product.title}
+        />
+        <div className="card-details-unique">
+          <div className="card-header-unique">
+            <h4 className="card-title-unique">{product.title}</h4>
+            <span className="card-price-unique">{product.price}</span>
           </div>
+          <p className="card-description-unique">{product.desc}</p>
+          <div className="wishlist-wrapper-unique">
+            <FaHeart className="wishlist-icon-unique" />
+          </div>
+        </div>
+      </div>
+    ))}
+</div>
+
 
           <div className="row">
             <div className="col-12 d-flex justify-content-center align-items-center mt-4">

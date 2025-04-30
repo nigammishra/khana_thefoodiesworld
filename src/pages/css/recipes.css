@@ -1,0 +1,57 @@
+.recipes-page {
+    font-family: 'Poppins', sans-serif;
+  }
+
+  
+  .recipes-section {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 60px auto;
+    gap: 20px;
+  }
+  
+  .recipe-card {
+    cursor: pointer;
+    background: #fff;
+    margin: 10px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 16px;
+    overflow: hidden;
+    flex: 1 1 calc(33.333% - 20px);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .recipe-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  }
+  
+  .recipe-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+  }
+  
+  .recipe-card .content {
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .recipe-card .icon {
+    font-size: 36px;
+    color: #f97316;
+    margin-bottom: 10px;
+  }
+  
+  .recipe-card h3 {
+    font-size: 22px;
+    margin: 10px 0;
+  }
+  
+  .recipe-card p {
+    color: #555;
+    font-size: 16px;
+    line-height: 1.6;
+  }
+  

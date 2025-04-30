@@ -19,7 +19,7 @@ const SocialNetworksCarousel = () => {
               to="#"
               className="btn btn-icon btn-secondary btn-facebook btn-lg stretched-link"
             >
-              <i className="bx bxl-facebook"></i>
+              <i className="bx bxl-facebook bxx"></i>
             </Link>
           </Zoom>
           <div className="pt-4">
@@ -33,7 +33,7 @@ const SocialNetworksCarousel = () => {
               to="#"
               className="btn btn-icon btn-secondary btn-instagram btn-lg stretched-link"
             >
-              <i className="bx bxl-instagram"></i>
+              <i className="bx bxl-instagram bxx"></i>
             </Link>
           </Zoom>
           <div className="pt-4">
@@ -47,7 +47,7 @@ const SocialNetworksCarousel = () => {
               to="#"
               className="btn btn-icon btn-secondary btn-twitter btn-lg stretched-link"
             >
-              <i className="bx bxl-twitter"></i>
+              <i className="bx bxl-twitter bxx"></i>
             </Link>
           </Zoom>
           <div className="pt-4">
@@ -61,7 +61,7 @@ const SocialNetworksCarousel = () => {
               to="#"
               className="btn btn-icon btn-secondary btn-linkedin btn-lg stretched-link"
             >
-              <i className="bx bxl-linkedin"></i>
+              <i className="bx bxl-linkedin bxx"></i>
             </Link>
           </Zoom>
           <div className="pt-4">
@@ -75,7 +75,7 @@ const SocialNetworksCarousel = () => {
               to="#"
               className="btn btn-icon btn-secondary btn-youtube btn-lg stretched-link"
             >
-              <i className="bx bxl-youtube"></i>
+              <i className="bx bxl-youtube bxx"></i>
             </Link>
           </Zoom>
           <div className="pt-4">
@@ -89,7 +89,7 @@ const SocialNetworksCarousel = () => {
               to="#"
               className="btn btn-icon btn-secondary btn-dribbble btn-lg stretched-link"
             >
-              <i className="bx bxl-dribbble"></i>
+              <i className="bx bxl-dribbble bxx"></i>
             </Link>
           </Zoom>
           <div className="pt-4">

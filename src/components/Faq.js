@@ -72,8 +72,8 @@ const FAQ = () => {
 
             <div className="faq">
               {faqData.map((faq) => (
-                <div className="card mb-2" key={faq.id}>
-                  <div className="card-header" id={`faqHeading-${faq.id}`}>
+                <div className="card-style mb-2" key={faq.id}>
+                  <div className="card-style-header" id={`faqHeading-${faq.id}`}>
                     <h5 className="mb-0">
                       <button
                         className="faq-title d-flex justify-content-start w-100"
@@ -95,7 +95,7 @@ const FAQ = () => {
                     aria-labelledby={`faqHeading-${faq.id}`}
                     data-bs-parent=".faq"
                   >
-                    <div className="card-body">
+                    <div className="card-style-body">
                     <p>
                     👉 {expanded[faq.id] ? faq.answer : truncate(faq.answer, 120)}
                       </p>
