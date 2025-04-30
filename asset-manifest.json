@@ -1,24 +1,33 @@
 {
   "files": {
-    "main.css": "/khana_thefoodiesworld/static/css/main.536b3cef.css",
-    "main.js": "/khana_thefoodiesworld/static/js/main.42bb182b.js",
+    "main.css": "/khana_thefoodiesworld/static/css/main.0dc5cf05.css",
+    "main.js": "/khana_thefoodiesworld/static/js/main.c92ff9cb.js",
     "static/js/453.deb8624f.chunk.js": "/khana_thefoodiesworld/static/js/453.deb8624f.chunk.js",
     "static/media/mainimagekhana.png": "/khana_thefoodiesworld/static/media/mainimagekhana.64e35304d2bfe028803a.png",
+    "static/media/team3.png": "/khana_thefoodiesworld/static/media/team3.615e896d5799b4337253.png",
+    "static/media/team1.jpeg": "/khana_thefoodiesworld/static/media/team1.a030baa6d2ffeb6745d6.jpeg",
+    "static/media/about.png": "/khana_thefoodiesworld/static/media/about.d12334d7b8a8ad2f8f58.png",
     "static/media/about2.png": "/khana_thefoodiesworld/static/media/about2.bb4a42500d413216f579.png",
+    "static/media/t.webp": "/khana_thefoodiesworld/static/media/t.3024b95586b1168f8a1d.webp",
     "static/media/food-doodles.jpg": "/khana_thefoodiesworld/static/media/food-doodles.52d8a36fedd535e07c1a.jpg",
     "static/media/about-bg.jpg": "/khana_thefoodiesworld/static/media/about-bg.fd1dcb559c3a7eda3abb.jpg",
     "static/media/about4.png": "/khana_thefoodiesworld/static/media/about4.1825bbae2ad126c7c6d7.png",
     "static/media/about1.png": "/khana_thefoodiesworld/static/media/about1.721eca59a134392ec36d.png",
     "static/media/about3.png": "/khana_thefoodiesworld/static/media/about3.09c014966778125df0b0.png",
     "static/media/Pizza_Hut_logo.svg.png": "/khana_thefoodiesworld/static/media/Pizza_Hut_logo.svg.56db8ed9f17040a805e7.png",
+    "static/media/about-main2.png": "/khana_thefoodiesworld/static/media/about-main2.0e21972b6a733f9985f1.png",
+    "static/media/about-bg-image.jpg": "/khana_thefoodiesworld/static/media/about-bg-image.c6e7b774a79534c9ae20.jpg",
+    "static/media/wht-choose-us.webp": "/khana_thefoodiesworld/static/media/wht-choose-us.f6834c45d9eb2bc0e508.webp",
     "static/media/khanalogo.png": "/khana_thefoodiesworld/static/media/khanalogo.0fc7f50c8737c4e3756e.png",
     "static/media/white-logo.png": "/khana_thefoodiesworld/static/media/white-logo.2b629c9dfd507961a6aa.png",
+    "static/media/team2.jpg": "/khana_thefoodiesworld/static/media/team2.5a6041c0a593b545f7c4.jpg",
     "static/media/food2.avif": "/khana_thefoodiesworld/static/media/food2.6f7fb395185a31778932.avif",
     "static/media/food4.avif": "/khana_thefoodiesworld/static/media/food4.ab47e1f270b0ee8e4214.avif",
     "static/media/food5.avif": "/khana_thefoodiesworld/static/media/food5.cbe59b1d94cdbba8ad66.avif",
     "static/media/kfc-logo.png": "/khana_thefoodiesworld/static/media/kfc-logo.eb52b4e9e754905d204d.png",
     "static/media/food1.avif": "/khana_thefoodiesworld/static/media/food1.b86ab8ae15c21775141a.avif",
     "static/media/Uber-Eats-logo.png": "/khana_thefoodiesworld/static/media/Uber-Eats-logo.c353e6f2a9e2fa0a5221.png",
+    "static/media/about-circle-1.png": "/khana_thefoodiesworld/static/media/about-circle-1.57fc2b0c8eba788fe6ab.png",
     "static/media/swiggy-logo.png": "/khana_thefoodiesworld/static/media/swiggy-logo.0e78084d5e3b23f1f8fa.png",
     "static/media/food3.avif": "/khana_thefoodiesworld/static/media/food3.ef9b8d72983660ed1bda.avif",
     "static/media/food6.avif": "/khana_thefoodiesworld/static/media/food6.f64f04ae6901b7573a7d.avif",
@@ -29,12 +38,12 @@
     "index.html": "/khana_thefoodiesworld/index.html",
     "static/media/slick.ttf": "/khana_thefoodiesworld/static/media/slick.c94f7671dcc99dce43e2.ttf",
     "static/media/slick.woff": "/khana_thefoodiesworld/static/media/slick.295183786cd8a1389865.woff",
-    "main.536b3cef.css.map": "/khana_thefoodiesworld/static/css/main.536b3cef.css.map",
-    "main.42bb182b.js.map": "/khana_thefoodiesworld/static/js/main.42bb182b.js.map",
+    "main.0dc5cf05.css.map": "/khana_thefoodiesworld/static/css/main.0dc5cf05.css.map",
+    "main.c92ff9cb.js.map": "/khana_thefoodiesworld/static/js/main.c92ff9cb.js.map",
     "453.deb8624f.chunk.js.map": "/khana_thefoodiesworld/static/js/453.deb8624f.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.536b3cef.css",
-    "static/js/main.42bb182b.js"
+    "static/css/main.0dc5cf05.css",
+    "static/js/main.c92ff9cb.js"
   ]
 }
