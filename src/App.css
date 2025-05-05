@@ -1,3 +1,22 @@
+.scroll-to-top {
+	position: fixed;
+	bottom: 30px;
+	right: 30px;
+	background-color: #198754; /* Bootstrap green */
+	color: white;
+	border: none;
+	padding: 10px 15px;
+	font-size: 20px;
+	border-radius: 50%;
+	cursor: pointer;
+	z-index: 1000;
+	box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+	transition: opacity 0.3s ease;
+  }
+  .scroll-to-top:hover {
+	background-color: #145c36;
+  }
+  
 /*-------------------------------------
 1.7 Inner Page Bannar Area Styles
 ---------------------------------------*/

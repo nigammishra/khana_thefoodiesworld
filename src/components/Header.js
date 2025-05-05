@@ -22,10 +22,10 @@ const dropdownData = [
         icon: '<i class="fas fa-sign-in-alt animated-icon" style="color: #4CAF50;"></i>',
       },
       {
-        title: "SignUp",
-        desc: "Create a new account",
-        href: "/account/signup",
-        icon: '<i class="fas fa-user-plus animated-icon" style="color: #2196F3;"></i>',
+        title: "Notifications",
+        desc: "Check your alerts",
+        href: "/account/notifications",
+        icon: '<i class="fas fa-bell animated-icon" style="color: #FF9800;"></i>',
       },
       {
         title: "ForgotPassword",
@@ -59,12 +59,7 @@ const dropdownData = [
         href: "/account/payment-methods",
         icon: '<i class="fas fa-credit-card animated-icon" style="color: #795548;"></i>',
       },
-      {
-        name: "Notifications",
-        desc: "Check your alerts",
-        href: "/account/notifications",
-        icon: '<i class="fas fa-bell animated-icon" style="color: #FF9800;"></i>',
-      },
+     
       {
         name: "WishlistItems",
         desc: "Your favorite items",
@@ -142,7 +137,7 @@ const Header = () => {
               <ul className="menu-bar">
                 <li><a className="nav-link" href="/about">About</a></li>
                 <li><a className="nav-link" href="/menu">Menu</a></li>
-                <li><a className="nav-link" href="/recipes">Recipes</a></li>
+                <li><a className="nav-link" href="/recipes">Khana Gallery</a></li>
                 <li><a className="nav-link" href="/shopdetails">Shop Details</a></li>
                 <li><a className="nav-link" href="/contacts">Contact</a></li>
 

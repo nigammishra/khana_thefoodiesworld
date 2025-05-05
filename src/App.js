@@ -15,7 +15,7 @@ import Contacts from "./pages/Contact";
 
 // Account Pages
 import SignIn from "./pages/AccountDetails/Signin";
-import SignUp from "./pages/AccountDetails/Signup";
+// import SignUp from "./pages/AccountDetails/Signup";
 import ForgotPassword from "./pages/AccountDetails/ForgotPassword";
 import OrdersDetails from "./pages/AccountDetails/OrdersInfo";
 import Settings from "./pages/AccountDetails/Settings";
@@ -23,6 +23,7 @@ import AddressDetails from "./pages/AccountDetails/AddressDetails";
 import PaymentMethods from "./pages/AccountDetails/PaymentMethods";
 import Notifications from "./pages/AccountDetails/Notifications";
 import WishlistItems from "./pages/AccountDetails/WishlistItems";
+import ScrollToTopButton from './components/ScrollToTop';
 
 function App() {
   return (
@@ -42,7 +43,7 @@ function App() {
 
         {/* Account Pages (Nested under /account) */}
         <Route path="/account/signin" element={<SignIn />} />
-        <Route path="/account/signup" element={<SignUp />} />
+        {/* <Route path="/account/signup" element={<SignUp />} /> */}
         <Route path="/account/forgot-password" element={<ForgotPassword />} />
         <Route path="/account/orders-details" element={<OrdersDetails />} />
         <Route path="/account/settings" element={<Settings />} />
@@ -54,6 +55,7 @@ function App() {
 
       {/* Footer will show on every page */}
       <Footer />
+      < ScrollToTopButton/>
     </Router>
   );
 }
