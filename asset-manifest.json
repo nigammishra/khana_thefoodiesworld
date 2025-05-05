@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/khana_thefoodiesworld/static/css/main.1e484ff4.css",
-    "main.js": "/khana_thefoodiesworld/static/js/main.01995b29.js",
+    "main.css": "/khana_thefoodiesworld/static/css/main.f552971c.css",
+    "main.js": "/khana_thefoodiesworld/static/js/main.060c1fff.js",
     "static/js/453.deb8624f.chunk.js": "/khana_thefoodiesworld/static/js/453.deb8624f.chunk.js",
     "static/media/mainimagekhana.png": "/khana_thefoodiesworld/static/media/mainimagekhana.64e35304d2bfe028803a.png",
     "static/media/team3.png": "/khana_thefoodiesworld/static/media/team3.615e896d5799b4337253.png",
@@ -18,6 +18,8 @@
     "static/media/about-main2.png": "/khana_thefoodiesworld/static/media/about-main2.0e21972b6a733f9985f1.png",
     "static/media/about-bg-image.jpg": "/khana_thefoodiesworld/static/media/about-bg-image.c6e7b774a79534c9ae20.jpg",
     "static/media/wht-choose-us.webp": "/khana_thefoodiesworld/static/media/wht-choose-us.f6834c45d9eb2bc0e508.webp",
+    "static/media/shop2.avif": "/khana_thefoodiesworld/static/media/shop2.8825a4149e5c1819258d.avif",
+    "static/media/shop1.jpg": "/khana_thefoodiesworld/static/media/shop1.c35d7a09c0fb7d80aa1b.jpg",
     "static/media/khanalogo.png": "/khana_thefoodiesworld/static/media/khanalogo.0fc7f50c8737c4e3756e.png",
     "static/media/white-logo.png": "/khana_thefoodiesworld/static/media/white-logo.2b629c9dfd507961a6aa.png",
     "static/media/team2.jpg": "/khana_thefoodiesworld/static/media/team2.5a6041c0a593b545f7c4.jpg",
@@ -38,12 +40,12 @@
     "index.html": "/khana_thefoodiesworld/index.html",
     "static/media/slick.ttf": "/khana_thefoodiesworld/static/media/slick.c94f7671dcc99dce43e2.ttf",
     "static/media/slick.woff": "/khana_thefoodiesworld/static/media/slick.295183786cd8a1389865.woff",
-    "main.1e484ff4.css.map": "/khana_thefoodiesworld/static/css/main.1e484ff4.css.map",
-    "main.01995b29.js.map": "/khana_thefoodiesworld/static/js/main.01995b29.js.map",
+    "main.f552971c.css.map": "/khana_thefoodiesworld/static/css/main.f552971c.css.map",
+    "main.060c1fff.js.map": "/khana_thefoodiesworld/static/js/main.060c1fff.js.map",
     "453.deb8624f.chunk.js.map": "/khana_thefoodiesworld/static/js/453.deb8624f.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.1e484ff4.css",
-    "static/js/main.01995b29.js"
+    "static/css/main.f552971c.css",
+    "static/js/main.060c1fff.js"
   ]
 }
