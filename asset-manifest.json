@@ -1,10 +1,12 @@
 {
   "files": {
-    "main.css": "/khana_thefoodiesworld/static/css/main.f552971c.css",
-    "main.js": "/khana_thefoodiesworld/static/js/main.060c1fff.js",
+    "main.css": "/khana_thefoodiesworld/static/css/main.56210398.css",
+    "main.js": "/khana_thefoodiesworld/static/js/main.42c3e499.js",
     "static/js/453.deb8624f.chunk.js": "/khana_thefoodiesworld/static/js/453.deb8624f.chunk.js",
     "static/media/mainimagekhana.png": "/khana_thefoodiesworld/static/media/mainimagekhana.64e35304d2bfe028803a.png",
     "static/media/team3.png": "/khana_thefoodiesworld/static/media/team3.615e896d5799b4337253.png",
+    "static/media/signin-bg-image": "/khana_thefoodiesworld/static/media/signin-bg-image.99ad867adaf16146b610",
+    "static/media/notification-bg-image.jpeg": "/khana_thefoodiesworld/static/media/notification-bg-image.30f02c3d7b8677f75086.jpeg",
     "static/media/team1.jpeg": "/khana_thefoodiesworld/static/media/team1.a030baa6d2ffeb6745d6.jpeg",
     "static/media/about.png": "/khana_thefoodiesworld/static/media/about.d12334d7b8a8ad2f8f58.png",
     "static/media/about2.png": "/khana_thefoodiesworld/static/media/about2.bb4a42500d413216f579.png",
@@ -40,12 +42,12 @@
     "index.html": "/khana_thefoodiesworld/index.html",
     "static/media/slick.ttf": "/khana_thefoodiesworld/static/media/slick.c94f7671dcc99dce43e2.ttf",
     "static/media/slick.woff": "/khana_thefoodiesworld/static/media/slick.295183786cd8a1389865.woff",
-    "main.f552971c.css.map": "/khana_thefoodiesworld/static/css/main.f552971c.css.map",
-    "main.060c1fff.js.map": "/khana_thefoodiesworld/static/js/main.060c1fff.js.map",
+    "main.56210398.css.map": "/khana_thefoodiesworld/static/css/main.56210398.css.map",
+    "main.42c3e499.js.map": "/khana_thefoodiesworld/static/js/main.42c3e499.js.map",
     "453.deb8624f.chunk.js.map": "/khana_thefoodiesworld/static/js/453.deb8624f.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.f552971c.css",
-    "static/js/main.060c1fff.js"
+    "static/css/main.56210398.css",
+    "static/js/main.42c3e499.js"
   ]
 }
