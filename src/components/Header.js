@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./header.css";
 import logo from "../images/khanalogo.png";
+import { Link } from "react-router-dom";
 
 // Dummy wishlist items (you can fetch this from API later)
 const wishlistItems = [
@@ -18,25 +19,25 @@ const dropdownData = [
       {
         title: "SignIn",
         desc: "Access your account easily",
-        href: "/account/signin",
+        to: "/account/signin",
         icon: '<i class="fas fa-sign-in-alt animated-icon" style="color: #4CAF50;"></i>',
       },
       {
         title: "Notifications",
         desc: "Check your alerts",
-        href: "/account/notifications",
+        to: "/account/notifications",
         icon: '<i class="fas fa-bell animated-icon" style="color: #FF9800;"></i>',
       },
       {
         title: "ForgotPassword",
         desc: "Recover your password",
-        href: "/account/forgot-password",
+        to: "/account/forgot-password",
         icon: '<i class="fas fa-unlock-alt animated-icon" style="color: #FFC107;"></i>',
       },
       {
         title: "Settings",
         desc: "Manage your preferences",
-        href: "/account/settings",
+        to: "/account/settings",
         icon: '<i class="fas fa-cog animated-icon" style="color: #9C27B0;"></i>',
       },
     ],
@@ -44,26 +45,26 @@ const dropdownData = [
       {
         name: "OrdersDetails",
         desc: "View your orders",
-        href: "/account/orders-details",
+        to: "/account/orders-details",
         icon: '<i class="fas fa-shopping-cart animated-icon" style="color: #FF5722;"></i>',
       },
       {
         name: "AddressDetails",
         desc: "Update your addresses",
-        href: "/account/address-details",
+        to: "/account/address-details",
         icon: '<i class="fas fa-map-marker-alt animated-icon" style="color: #00BCD4;"></i>',
       },
       {
         name: "PaymentMethods",
         desc: "Manage your payments",
-        href: "/account/payment-methods",
+        to: "/account/payment-methods",
         icon: '<i class="fas fa-credit-card animated-icon" style="color: #795548;"></i>',
       },
      
       {
         name: "WishlistItems",
         desc: "Your favorite items",
-        href: "/account/wishlist-items",
+        to: "/account/wishlist-items",
         icon: '<i class="fas fa-heart animated-icon" style="color: #E91E63;"></i>',
       },
     ],
@@ -130,16 +131,16 @@ const Header = () => {
       <header id="nav-menu" aria-label="navigation bar">
         <div className="container contain-style">
           <div className="nav-start">
-            <a className="logo" href="/khana_thefoodiesworld/">
+            <Link className="logo" to="/khana_thefoodiesworld/">
               <img src={logo} width="140" alt="Inc Logo" />
-            </a>
+            </Link>
             <nav className={`menu ${hamburgerOpen ? "show" : ""}`}>
               <ul className="menu-bar">
-                <li><a className="nav-link" href="/about">About</a></li>
-                <li><a className="nav-link" href="/menu">Menu</a></li>
-                <li><a className="nav-link" href="/recipes">Khana Gallery</a></li>
-                <li><a className="nav-link" href="/shopdetails">Shop Details</a></li>
-                <li><a className="nav-link" href="/contacts">Contact</a></li>
+                <li><Link className="nav-link" to="/about">About</Link></li>
+                <li><Link className="nav-link" to="/menu">Menu</Link></li>
+                <li><Link className="nav-link" to="/recipes">Khana Gallery</Link></li>
+                <li><Link className="nav-link" to="/shopdetails">Shop Details</Link></li>
+                <li><Link className="nav-link" to="/contacts">Contact</Link></li>
 
                 {/* Dropdown */}
                 {dropdownData.map((drop) => (
@@ -163,7 +164,7 @@ const Header = () => {
                       <ul role="menu">
                         {drop.items.map((item, idx) => (
                           <li key={idx} role="menuitem">
-                            <a className="dropdown-link" href={item.href}>
+                            <Link className="dropdown-link" to={item.to}>
                               {item.icon && (
                                 <span
                                   className="icon"
@@ -174,7 +175,7 @@ const Header = () => {
                                 <span className="dropdown-link-title">{item.title}</span>
                                 {item.desc && <p>{item.desc}</p>}
                               </div>
-                            </a>
+                            </Link>
                           </li>
                         ))}
                       </ul>
@@ -187,7 +188,7 @@ const Header = () => {
                             </li>
                             {drop.apps.map((app, idx) => (
                               <li key={idx} role="menuitem">
-                                <a className="dropdown-link" href={app.href}>
+                                <Link className="dropdown-link" to={app.to}>
                                   {app.icon && (
                                     <span
                                       className="icon"
@@ -198,7 +199,7 @@ const Header = () => {
                                     <span className="dropdown-link-title">{app.name}</span>
                                     {app.desc && <p>{app.desc}</p>}
                                   </div>
-                                </a>
+                                </Link>
                               </li>
                             ))}
                           </>
