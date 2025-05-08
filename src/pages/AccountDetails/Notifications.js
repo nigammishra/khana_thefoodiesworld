@@ -18,6 +18,20 @@ const NotificationPage = () => {
         </div>
       </div>
 
+
+      <div className="container">
+      <div className="row mt-5">
+          <div className="col-12">
+            <h1 className="section-title"> 🍽️ Welcome Back, Food Explorer!</h1>
+          
+            <p className="section-description">
+            We're excited to have you on board again!
+            </p>
+          </div>
+        </div>
+        </div>
+
+
       <div className="notification-container">
         <div className="notification-box">
           <h1 className="notification-title">🍽️ Delicious Alerts Await!</h1>

@@ -1,11 +1,14 @@
-import React from "react";
+ import React, { useEffect, useState } from "react";
 import ClampLines from "react-clamp-lines";
 import "../../src/pages/css/shopdetails.css"; // Ensure your styles for projcard are here
 import { Link } from "react-router-dom";
 import SocialNetworksCarousel from "../components/SocialMediaLinks";
 import Partners from "../components/Partners";
 import shop1 from "../images/shop1.jpg";
-import shop2 from "../images/shop2.avif";
+import shop2 from "../images/shop2.avif"; 
+import AOS from "aos";
+import "aos/dist/aos.css";
+import LoaderOne from "../Loaders/LoaderOne";
 
 const projCards = [
   {
@@ -31,6 +34,17 @@ const projCards = [
 ];
 
 const ShopDetails = () => {
+  
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    AOS.init({ duration: 1000 });
+    const timeout = setTimeout(() => setLoading(false), 4000);  // Loader duration
+    return () => clearTimeout(timeout);
+  }, []);
+
+  // If loading, show the loader
+  if (loading) return <LoaderOne />;
   return (
     <>
       {/* Inner Page Banner */}

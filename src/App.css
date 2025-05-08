@@ -86,3 +86,430 @@
 	-o-transition: all 0.5s ease-out;
 	transition: all 0.5s ease-out;
   }
+
+
+  @keyframes bubble {
+	0% {
+	  transform: scale(0);
+	  opacity: 0;
+	}
+	25% {
+	  transform: scale(0.5) translate(0, 1);
+	  opacity: 0.5;
+	}
+	50% {
+	  transform: scale(1) translate(0, -20px);
+	  opacity: 1;
+	}
+	75% {
+	  transform: scale(1) translate(0, -30px);
+	  opacity: 1;
+	}
+	100% {
+	  transform: scale(1) translate(0, -60px);
+	  opacity: 0;
+	}
+  }
+  
+  @keyframes stove {
+	0% {
+	  transform: translate(0, 1);
+	}
+	10% {
+	  transform: translate(0, -10%) rotate(5deg);
+	}
+	20% {
+	  transform: translate(0, 10%) rotate(-10deg);
+	}
+	40% {
+	  transform: translate(0, -40%);
+	}
+	95% {
+	  transform: rotate(5deg);
+	}
+	100% {
+	  transform: translate(0, 1) rotate(0deg);
+	}
+  }
+  
+  @keyframes stove-handle {
+	0% {
+	  transform: translate(0, 1);
+	}
+	10% {
+	  transform: translate(0, -10%) rotate(25deg);
+	}
+	20% {
+	  transform: translate(0, 10%) rotate(-10deg);
+	}
+	40% {
+	  transform: translate(0, -40%) rotate(10deg);
+	}
+	100% {
+	  transform: translate(0, 1);
+	}
+  }
+  
+  @keyframes food-2 {
+	0% {
+	  transform: translate(0);
+	}
+	10% {
+	  transform: translate(55px, -1px);
+	}
+	20% {
+	  transform: translate(63px, -5px) rotate(0deg);
+	}
+	28% {
+	  transform: translate(70px, -50px);
+	}
+	35% {
+	  transform: translate(68px, -55px) rotate(180deg);
+	}
+	40% {
+	  transform: translate(60px, -60px);
+	}
+	45% {
+	  transform: translate(52px, -65px) rotate(360deg);
+	}
+	50% {
+	  transform: translate(42px, -69px);
+	}
+	55% {
+	  transform: translate(31px, -67px);
+	}
+	60% {
+	  transform: translate(22px, -64px) rotate(-180deg);
+	}
+	65% {
+	  transform: translate(15px, -60px);
+	}
+	70% {
+	  transform: translate(6px, -54px);
+	}
+	75% {
+	  transform: translate(-1px, -47px) rotate(-90deg);
+	}
+	80% {
+	  transform: translate(-7px, -36px);
+	}
+	85% {
+	  transform: translate(-9px, -24px) rotate(0deg);
+	}
+	90% {
+	  transform: translate(-7px, -8px) rotate(90deg);
+	}
+	100% {
+	  transform: translate(0, 0);
+	}
+  }
+  
+  .spinner-container {
+	width: 500px;
+	height: 250px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-bottom: 200px;
+	margin-right: 50px;
+  }
+  
+  .spinner {
+	position: relative;
+  }
+  
+  .stove {
+	position: relative;
+  }
+  
+  .stove--handle {
+	width: 100px;
+	height: 10px;
+	position: absolute;
+	left: -74px;
+	bottom: -65px;
+	background-color: transparent;
+	border-top: 5px solid #000;
+	border-left: 3px solid transparent;
+	border-radius: 100%;
+	transform: rotate(15deg);
+	transform-origin: right;
+	animation: stove-handle 1500ms 250ms infinite;
+  }
+  
+  .stove--base {
+	width: 120px;
+	height: 30px;
+	background-color: #000;
+	border-radius: 0 0 40px 40px;
+	position: absolute;
+	top: 50px;
+	transform-origin: left;
+	animation: stove 1500ms 250ms infinite;
+  }
+  
+  .bubble {
+	position: absolute;
+	border-radius: 50%;
+	background: linear-gradient(173deg, #ff79da 0%, #d66cdb 39%, #ab5edc 85%, #9b59dc 100%);
+	opacity: 1;
+	animation: bubble 2000ms infinite ease-in;
+  }
+  .bubble--1 { animation-delay: 166.67ms; top: 32px; left: -25px; width: 15px; height: 15px; }
+  .bubble--2 { animation-delay: 333.33ms; top: 30px; left: 10px; width: 8px; height: 8px; }
+  .bubble--3 { animation-delay: 500ms; top: 3px; left: 2px; width: 10px; height: 10px; }
+  .bubble--4 { animation-delay: 666.67ms; top: -15px; right: 8px; width: 8px; height: 8px; }
+  .bubble--5 { animation-delay: 833.33ms; top: 5px; left: -41px; width: 10px; height: 10px; }
+  .bubble--6 { animation-delay: 1000ms; top: 55px; left: -43px; width: 8px; height: 8px; }
+  
+  .aliment {
+	left: 13px;
+	bottom: -64px;
+	width: 10px;
+	height: 10px;
+	position: absolute;
+	animation: food-2 1500ms infinite ease-in;
+  }
+  .aliment--1 { animation-delay: 250ms; background-color: #32b091; }
+  .aliment--2 { animation-delay: 500ms; background-color: #4acbab; }
+  .aliment--3 { animation-delay: 750ms; background-color: #278870; }
+  
+
+  @import url("https://fonts.googleapis.com/css?family=Amatic+SC");
+
+  .cooking-loader-wrapper {
+	/* background-color: #ffde6b; */
+	height: 100vh;
+	width: 100vw;
+	overflow: hidden;
+  }
+  
+  .loader-heading {
+	position: relative;
+	margin: 0 auto;
+	top: 25vh;
+	width: 100vw;
+	text-align: center;
+	font-family: "Amatic SC", cursive;
+	font-size: 6vh;
+	color: #333;
+	opacity: 0.75;
+	animation: pulse 2.5s linear infinite;
+  }
+  
+  #cooking {
+	position: relative;
+	margin: 0 auto;
+	top: 0;
+	width: 75vh;
+	height: 75vh;
+	overflow: hidden;
+  }
+  #cooking .bubble {
+	position: absolute;
+	border-radius: 100%;
+	box-shadow: 0 0 0.25vh #4d4d4d;
+	opacity: 0;
+  }
+  #cooking .bubble:nth-child(1) {
+	margin-top: 2.5vh;
+	left: 58%;
+	width: 2.5vh;
+	height: 2.5vh;
+	background-color: #454545;
+	animation: bubble 2s cubic-bezier(0.53, 0.16, 0.39, 0.96) infinite;
+  }
+  #cooking .bubble:nth-child(2) {
+	margin-top: 3vh;
+	left: 52%;
+	width: 2vh;
+	height: 2vh;
+	background-color: #3d3d3d;
+	animation: bubble 2s ease-in-out 0.35s infinite;
+  }
+  #cooking .bubble:nth-child(3) {
+	margin-top: 1.8vh;
+	left: 50%;
+	width: 1.5vh;
+	height: 1.5vh;
+	background-color: #333;
+	animation: bubble 1.5s cubic-bezier(0.53, 0.16, 0.39, 0.96) 0.55s infinite;
+  }
+  #cooking .bubble:nth-child(4) {
+	margin-top: 2.7vh;
+	left: 56%;
+	width: 1.2vh;
+	height: 1.2vh;
+	background-color: #2b2b2b;
+	animation: bubble 1.8s cubic-bezier(0.53, 0.16, 0.39, 0.96) 0.9s infinite;
+  }
+  #cooking .bubble:nth-child(5) {
+	margin-top: 2.7vh;
+	left: 63%;
+	width: 1.1vh;
+	height: 1.1vh;
+	background-color: #242424;
+	animation: bubble 1.6s ease-in-out 1s infinite;
+  }
+  #cooking #area {
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	width: 50%;
+	height: 50%;
+	background-color: transparent;
+	transform-origin: 15% 60%;
+	animation: flip 2.1s ease-in-out infinite;
+  }
+  #cooking #area #sides {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	transform-origin: 15% 60%;
+	animation: switchSide 2.1s ease-in-out infinite;
+  }
+  #cooking #area #sides #handle {
+	position: absolute;
+	bottom: 18%;
+	right: 80%;
+	width: 35%;
+	height: 20%;
+	background-color: transparent;
+	border-top: 1vh solid #333;
+	border-left: 1vh solid transparent;
+	border-radius: 100%;
+	transform: rotate(20deg) rotateX(0deg) scale(1.3, 0.9);
+  }
+  #cooking #area #sides #pan {
+	position: absolute;
+	bottom: 20%;
+	right: 30%;
+	width: 50%;
+	height: 8%;
+	background-color: #333;
+	border-radius: 0 0 1.4em 1.4em;
+	transform-origin: -15% 0;
+  }
+  #cooking #area #pancake {
+	position: absolute;
+	top: 24%;
+	width: 100%;
+	height: 100%;
+	transform: rotateX(85deg);
+	animation: jump 2.1s ease-in-out infinite;
+  }
+  #cooking #area #pancake #pastry {
+	position: absolute;
+	bottom: 26%;
+	right: 37%;
+	width: 40%;
+	height: 45%;
+	background-color: #333;
+	box-shadow: 0 0 3px 0 #333;
+	border-radius: 100%;
+	transform-origin: -20% 0;
+	animation: fly 2.1s ease-in-out infinite;
+  }
+  
+  @keyframes jump {
+	0% {
+	  top: 24%;
+	  transform: rotateX(85deg);
+	}
+	25% {
+	  top: 10%;
+	  transform: rotateX(0deg);
+	}
+	50% {
+	  top: 30%;
+	  transform: rotateX(85deg);
+	}
+	75% {
+	  transform: rotateX(0deg);
+	}
+	100% {
+	  transform: rotateX(85deg);
+	}
+  }
+  @keyframes flip {
+	0% {
+	  transform: rotate(0deg);
+	}
+	5% {
+	  transform: rotate(-27deg);
+	}
+	30%, 50% {
+	  transform: rotate(0deg);
+	}
+	55% {
+	  transform: rotate(27deg);
+	}
+	83.3% {
+	  transform: rotate(0deg);
+	}
+	100% {
+	  transform: rotate(0deg);
+	}
+  }
+  @keyframes switchSide {
+	0% {
+	  transform: rotateY(0deg);
+	}
+	50% {
+	  transform: rotateY(180deg);
+	}
+	100% {
+	  transform: rotateY(0deg);
+	}
+  }
+  @keyframes fly {
+	0% {
+	  bottom: 26%;
+	  transform: rotate(0deg);
+	}
+	10% {
+	  bottom: 40%;
+	}
+	50% {
+	  bottom: 26%;
+	  transform: rotate(-190deg);
+	}
+	80% {
+	  bottom: 40%;
+	}
+	100% {
+	  bottom: 26%;
+	  transform: rotate(0deg);
+	}
+  }
+  @keyframes bubble {
+	0% {
+	  transform: scale(0.15, 0.15);
+	  top: 80%;
+	  opacity: 0;
+	}
+	50% {
+	  transform: scale(1.1, 1.1);
+	  opacity: 1;
+	}
+	100% {
+	  transform: scale(0.33, 0.33);
+	  top: 60%;
+	  opacity: 0;
+	}
+  }
+  @keyframes pulse {
+	0% {
+	  transform: scale(1, 1);
+	  opacity: 0.25;
+	}
+	50% {
+	  transform: scale(1.2, 1);
+	  opacity: 1;
+	}
+	100% {
+	  transform: scale(1, 1);
+	  opacity: 0.25;
+	}
+  }
+  

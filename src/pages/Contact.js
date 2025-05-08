@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import Partners from "../components/Partners";
 import SocialNetworksCarousel from "../components/SocialMediaLinks";
@@ -11,8 +11,23 @@ import SocialNetworksCarousel from "../components/SocialMediaLinks";
 //   FaMapMarkedAlt,
 // } from "react-icons/fa";
 import "../../src/pages/css/contact.css";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import LoaderOne from "../Loaders/LoaderOne";
 
 const Contact = () => {
+
+
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    AOS.init({ duration: 1000 });
+    const timeout = setTimeout(() => setLoading(false), 4000);  // Loader duration
+    return () => clearTimeout(timeout);
+  }, []);
+
+  // If loading, show the loader
+  if (loading) return <LoaderOne />;
   return (
     <div>
       <>

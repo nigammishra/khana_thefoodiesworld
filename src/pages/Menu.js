@@ -5,13 +5,27 @@ import "aos/dist/aos.css";
 import "../../src/pages/css/recipes.css";
 import "../../src/pages/css/menu.css";
 import SocialNetworksCarousel from "../components/SocialMediaLinks";
-import Partners from "../components/Partners";
+import Partners from "../components/Partners"; 
+import LoaderOne from "../../src/Loaders/AccountLoader";
+
 
 const Menu = () => {
    const [activeTab, setActiveTab] = useState('Burgers');
   useEffect(() => {
     AOS.init({ duration: 1000 });
   }, []);
+
+ 
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    AOS.init({ duration: 1000 });
+    const timeout = setTimeout(() => setLoading(false), 4000);  // Loader duration
+    return () => clearTimeout(timeout);
+  }, []);
+
+  // If loading, show the loader
+  if (loading) return <LoaderOne />;
 
   const recipeData = [
     {

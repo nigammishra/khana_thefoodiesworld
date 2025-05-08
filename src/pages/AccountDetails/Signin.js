@@ -1,7 +1,10 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import "../../pages/AccountDetails/Accountcss/signinandup.css";
-import Partners from "../../components/Partners";
+import Partners from "../../components/Partners"; 
+import AOS from "aos";
+import "aos/dist/aos.css";
+import LoaderOne from "../../Loaders/AccountLoader";
 
 const Signin = () => {
   const [isSignUp, setIsSignUp] = useState(false);
@@ -16,6 +19,17 @@ const Signin = () => {
     document.body.classList.remove("active");
   };
 
+
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    AOS.init({ duration: 1000 });
+    const timeout = setTimeout(() => setLoading(false), 4000);  // Loader duration
+    return () => clearTimeout(timeout);
+  }, []);
+
+  // If loading, show the loader
+  if (loading) return <LoaderOne />;
   return (
     <div>
       <>

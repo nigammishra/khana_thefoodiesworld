@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import "../../src/pages/css/about.css";
@@ -11,6 +11,7 @@ import Slider from "react-slick";
 import team1 from "../images/team1.jpeg";
 import team2 from "../images/team2.jpg";
 import team3 from "../images/team3.png";
+import LoaderOne from "../Loaders/LoaderOne";
 // import signature from "../images/signature.png";
 const teamData = [
   {
@@ -40,6 +41,17 @@ const About = () => {
     AOS.init({ duration: 1000 });
   }, []);
   
+
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    AOS.init({ duration: 1000 });
+    const timeout = setTimeout(() => setLoading(false), 4000);  // Loader duration
+    return () => clearTimeout(timeout);
+  }, []);
+
+  // If loading, show the loader
+  if (loading) return <LoaderOne />;
 
   const settings = {
     dots: true,
