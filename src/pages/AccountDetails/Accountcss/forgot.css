@@ -1,0 +1,104 @@
+.forgot-wrapper {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  font-family: 'Montserrat', sans-serif;
+  background: url("../../../images/food-doodles.jpg") no-repeat center center;
+  background-size: cover;
+  background-attachment: fixed;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.forgot-wrapper::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.4); /* adjust darkness here */
+  z-index: -1;
+}
+
+  
+  .forgot-container {
+    background: #fff;
+    padding: 2.5rem 3rem;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 420px;
+    text-align: center;
+  }
+  
+  .forgot-title {
+    font-size: 1.75rem;
+    margin-bottom: 0.5rem;
+    color: #333;
+  }
+  
+  .forgot-subtext {
+    font-size: 0.95rem;
+    color: #666;
+    margin-bottom: 1.5rem;
+  }
+  
+  .forgot-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .forgot-label {
+    text-align: left;
+    font-weight: 500;
+    font-size: 0.9rem;
+    color: #444;
+  }
+  
+  .forgot-input {
+    padding: 0.75rem 1rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border 0.3s ease;
+  }
+  
+  .forgot-input:focus {
+    outline: none;
+    border-color: #6c63ff;
+  }
+  
+  .forgot-button {
+    padding: 0.75rem;
+    background-color: #6c63ff;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .forgot-button:hover {
+    background-color: #574fcf;
+  }
+  
+  .forgot-footer {
+    margin-top: 1.5rem;
+  }
+  
+  .back-to-login {
+    color: #6c63ff;
+    text-decoration: none;
+    font-weight: 500;
+    transition: text-decoration 0.2s;
+  }
+  
+  .back-to-login:hover {
+    text-decoration: underline;
+  }
+  

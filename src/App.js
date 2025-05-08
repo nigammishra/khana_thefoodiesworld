@@ -1,9 +1,14 @@
+import { useState, useEffect } from "react";
+import AOS from "aos";  // Make sure AOS is installed and imported
+import "aos/dist/aos.css";  // AOS styles
+
 import './App.css';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 // Components
 import Header from "./components/Header";
 import Footer from "./components/Footer";
+import ScrollToTopButton from './components/ScrollToTop';
 
 // Pages
 import Home from "./pages/Home";
@@ -15,7 +20,6 @@ import Contacts from "./pages/Contact";
 
 // Account Pages
 import SignIn from "./pages/AccountDetails/Signin";
-// import SignUp from "./pages/AccountDetails/Signup";
 import ForgotPassword from "./pages/AccountDetails/ForgotPassword";
 import OrdersDetails from "./pages/AccountDetails/OrdersInfo";
 import Settings from "./pages/AccountDetails/Settings";
@@ -23,9 +27,22 @@ import AddressDetails from "./pages/AccountDetails/AddressDetails";
 import PaymentMethods from "./pages/AccountDetails/PaymentMethods";
 import Notifications from "./pages/AccountDetails/Notifications";
 import WishlistItems from "./pages/AccountDetails/WishlistItems";
-import ScrollToTopButton from './components/ScrollToTop';
+
+// Your FoodLoader component (imported or defined here)
+import FoodLoader from "./components/FoodLoader";
 
 function App() {
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    AOS.init({ duration: 1000 });
+    const timeout = setTimeout(() => setLoading(false), 4000);  // Loader duration
+    return () => clearTimeout(timeout);
+  }, []);
+
+  // If loading, show the loader
+  if (loading) return <FoodLoader />;
+
   return (
     <Router>
       {/* Header will show on every page */}
@@ -43,7 +60,6 @@ function App() {
 
         {/* Account Pages (Nested under /account) */}
         <Route path="/account/signin" element={<SignIn />} />
-        {/* <Route path="/account/signup" element={<SignUp />} /> */}
         <Route path="/account/forgot-password" element={<ForgotPassword />} />
         <Route path="/account/orders-details" element={<OrdersDetails />} />
         <Route path="/account/settings" element={<Settings />} />
@@ -55,12 +71,9 @@ function App() {
 
       {/* Footer will show on every page */}
       <Footer />
-      < ScrollToTopButton/>
+      <ScrollToTopButton />
     </Router>
   );
 }
 
 export default App;
-
-
-

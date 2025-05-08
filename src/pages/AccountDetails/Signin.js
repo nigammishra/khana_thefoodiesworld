@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "../../pages/AccountDetails/Accountcss/signinandup.css";
+import Partners from "../../components/Partners";
 
 const Signin = () => {
   const [isSignUp, setIsSignUp] = useState(false);
@@ -79,7 +80,7 @@ const Signin = () => {
                       <i className="bx bxl-linkedin-square linkedin"></i>
                     </div>
                     <input type="submit" value="Login" />
-                    <Link href="#" className="forgot">
+                    <Link href="/account/forgot-password" className="forgot">
                       Forgot Password ?
                     </Link>
                   </form>
@@ -93,7 +94,7 @@ const Signin = () => {
                     <input type="password" placeholder="Password" />
                     <input type="password" placeholder="Confirm Password" />
                     <input type="submit" value="Sign Up" />
-                    <Link href="#" className="forgot">
+                    <Link href="/account/forgot-password" className="forgot">
                       Forgot Password ?
                     </Link>
                   </form>
@@ -103,6 +104,7 @@ const Signin = () => {
           </div>
         </div>
       </>
+      < Partners/>
     </div>
   );
 };

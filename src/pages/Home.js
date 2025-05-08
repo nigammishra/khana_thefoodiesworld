@@ -21,7 +21,7 @@ import food4 from "../images/food4.avif";
 import food5 from "../images/food5.avif";
 import food6 from "../images/food6.avif";
 import Partners from "../components/Partners";
-import FAQ from "../components/Faq";
+import FAQ from "../components/Faq"; 
 
 const Home = () => {
   useEffect(() => {
@@ -95,7 +95,7 @@ const Home = () => {
   };
 
   return (
-    <div>
+    <div> 
       <section className="hero-section" id="home">
         <div className="hero-content">
           <span>Welcome to our</span>
