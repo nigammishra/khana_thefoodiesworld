@@ -3,13 +3,12 @@ import "./header.css";
 import logo from "../images/khanalogo.png";
 import { Link } from "react-router-dom";
 
-// Dummy wishlist items (you can fetch this from API later)
+// Dummy wishlist items
 const wishlistItems = [
   { id: 1, name: "Pizza Margherita", amount: 12.99, status: "Delivered", image: "https://images.unsplash.com/photo-1600891964599-f61ba0e24092" },
   { id: 2, name: "Veg Burger", amount: 8.49, status: "Processing", image: "https://images.unsplash.com/photo-1550547660-d9450f859349" },
   { id: 3, name: "Chocolate Cake", amount: 15.00, status: "Failed", image: "https://images.unsplash.com/photo-1589302168068-964664d93dc0" },
 ];
-
 
 const dropdownData = [
   {
@@ -60,7 +59,6 @@ const dropdownData = [
         to: "/account/payment-methods",
         icon: '<i class="fas fa-credit-card animated-icon" style="color: #795548;"></i>',
       },
-     
       {
         name: "WishlistItems",
         desc: "Your favorite items",
@@ -74,24 +72,23 @@ const dropdownData = [
 const Header = () => {
   const [openDropdown, setOpenDropdown] = useState(null);
   const [hamburgerOpen, setHamburgerOpen] = useState(false);
-  const [isProfileOpen, setIsProfileOpen] = useState(false); // Canvas open/close
+  const [isProfileOpen, setIsProfileOpen] = useState(false);
   const [wishlistCount, setWishlistCount] = useState(0);
 
   const toggleDropdown = (id) => {
     setOpenDropdown((prev) => (prev === id ? null : id));
   };
 
-  const closeDropdown = () => {
-    setOpenDropdown(null);
-  };
-
-  const toggleHamburger = () => {
-    setHamburgerOpen((prev) => !prev);
-  };
-
+  const closeDropdown = () => setOpenDropdown(null);
+  const toggleHamburger = () => setHamburgerOpen((prev) => !prev);
   const toggleProfile = (e) => {
     e.stopPropagation();
     setIsProfileOpen((prev) => !prev);
+  };
+
+  const handleLinkClick = () => {
+    setHamburgerOpen(false);
+    closeDropdown();
   };
 
   useEffect(() => {
@@ -102,8 +99,7 @@ const Header = () => {
 
     document.addEventListener("click", handleClickOutside);
     document.addEventListener("keydown", handleEsc);
-
-    setWishlistCount(wishlistItems.length); // Set wishlist count when component mounts
+    setWishlistCount(wishlistItems.length);
 
     return () => {
       document.removeEventListener("click", handleClickOutside);
@@ -123,26 +119,23 @@ const Header = () => {
         return "gray";
     }
   };
-  
-
 
   return (
     <>
       <header id="nav-menu" aria-label="navigation bar">
         <div className="container contain-style">
           <div className="nav-start">
-            <Link className="logo" to="/khana_thefoodiesworld/">
+            <Link className="logo" to="/khana_thefoodiesworld/" onClick={handleLinkClick}>
               <img src={logo} width="140" alt="Inc Logo" />
             </Link>
             <nav className={`menu ${hamburgerOpen ? "show" : ""}`}>
               <ul className="menu-bar">
-                <li><Link className="nav-link" to="/about">About</Link></li>
-                <li><Link className="nav-link" to="/menu">Menu</Link></li>
-                <li><Link className="nav-link" to="/recipes">Khana Gallery</Link></li>
-                <li><Link className="nav-link" to="/shopdetails">Shop Details</Link></li>
-                <li><Link className="nav-link" to="/contacts">Contact</Link></li>
+                <li><Link className="nav-link" to="/about" onClick={handleLinkClick}>About</Link></li>
+                <li><Link className="nav-link" to="/menu" onClick={handleLinkClick}>Menu</Link></li>
+                <li><Link className="nav-link" to="/recipes" onClick={handleLinkClick}>Khana Gallery</Link></li>
+                <li><Link className="nav-link" to="/shopdetails" onClick={handleLinkClick}>Shop Details</Link></li>
+                <li><Link className="nav-link" to="/contacts" onClick={handleLinkClick}>Contact</Link></li>
 
-                {/* Dropdown */}
                 {dropdownData.map((drop) => (
                   <li key={drop.id}>
                     <button
@@ -157,23 +150,18 @@ const Header = () => {
                       {drop.title}
                       <i className="bx bx-chevron-down" aria-hidden="true"></i>
                     </button>
-                    <div
-                      id={drop.id}
-                      className={`dropdown ${openDropdown === drop.id ? "active" : ""}`}
-                    >
+                    <div className={`dropdown ${openDropdown === drop.id ? "active" : ""}`} id={drop.id}>
                       <ul role="menu">
                         {drop.items.map((item, idx) => (
                           <li key={idx} role="menuitem">
-                            <Link className="dropdown-link" to={item.to}>
-                              {item.icon && (
-                                <span
-                                  className="icon"
-                                  dangerouslySetInnerHTML={{ __html: item.icon }}
-                                />
-                              )}
+                            <Link className="dropdown-link" to={item.to} onClick={handleLinkClick}>
+                              <span
+                                className="icon"
+                                dangerouslySetInnerHTML={{ __html: item.icon }}
+                              />
                               <div>
                                 <span className="dropdown-link-title">{item.title}</span>
-                                {item.desc && <p>{item.desc}</p>}
+                                <p>{item.desc}</p>
                               </div>
                             </Link>
                           </li>
@@ -181,29 +169,23 @@ const Header = () => {
                       </ul>
 
                       <ul role="menu">
-                        {drop.apps && drop.apps.length > 0 && (
-                          <>
-                            <li className="dropdown-title">
-                              <span className="dropdown-link-title">More Settings</span>
-                            </li>
-                            {drop.apps.map((app, idx) => (
-                              <li key={idx} role="menuitem">
-                                <Link className="dropdown-link" to={app.to}>
-                                  {app.icon && (
-                                    <span
-                                      className="icon"
-                                      dangerouslySetInnerHTML={{ __html: app.icon }}
-                                    />
-                                  )}
-                                  <div>
-                                    <span className="dropdown-link-title">{app.name}</span>
-                                    {app.desc && <p>{app.desc}</p>}
-                                  </div>
-                                </Link>
-                              </li>
-                            ))}
-                          </>
-                        )}
+                        <li className="dropdown-title">
+                          <span className="dropdown-link-title">More Settings</span>
+                        </li>
+                        {drop.apps.map((app, idx) => (
+                          <li key={idx} role="menuitem">
+                            <Link className="dropdown-link" to={app.to} onClick={handleLinkClick}>
+                              <span
+                                className="icon"
+                                dangerouslySetInnerHTML={{ __html: app.icon }}
+                              />
+                              <div>
+                                <span className="dropdown-link-title">{app.name}</span>
+                                <p>{app.desc}</p>
+                              </div>
+                            </Link>
+                          </li>
+                        ))}
                       </ul>
                     </div>
                   </li>
@@ -219,9 +201,6 @@ const Header = () => {
                 <i className="bx bx-search" aria-hidden="true"></i>
               </form>
 
-              
-
-              {/* Profile Button */}
               <button className="profile-btn" onClick={toggleProfile}>
                 <img
                   src="https://github.com/Evavic44/responsive-navbar-with-dropdown/blob/main/assets/images/user.jpg?raw=true"
@@ -250,53 +229,50 @@ const Header = () => {
         </div>
       </header>
 
-      {/* Profile Offcanvas */}
-{isProfileOpen && (
-  <div className="profile-canvas">
-    <div className="profile-header">
-      <h3>My Profile</h3>
-      <button onClick={toggleProfile} className="close-btn">&times;</button>
-    </div>
-    <div className="profile-body">
-      <img
-        src="https://github.com/Evavic44/responsive-navbar-with-dropdown/blob/main/assets/images/user.jpg?raw=true"
-        width="80"
-        height="80"
-        alt="User"
-        style={{ borderRadius: "50%", marginBottom: "10px" }}
-      />
-      <h4>Frontend Ace...</h4>
-      <p>frontendace@gmail.com</p>
-      <hr />
-      <h5>Wishlist Items: {wishlistCount}</h5>
-
-      {/* Wishlist Items List */}
-      <div className="wishlist-items">
-        {wishlistItems.map((item) => (
-          <div className="wishlist-item" key={item.id}>
+      {isProfileOpen && (
+        <div className="profile-canvas">
+          <div className="profile-header">
+            <h3>My Profile</h3>
+            <button onClick={toggleProfile} className="close-btn">&times;</button>
+          </div>
+          <div className="profile-body">
             <img
-              src={item.image}
-              alt={item.name}
-              width="50"
-              height="50"
-              style={{ borderRadius: "10px", objectFit: "cover", marginRight: "10px" }}
+              src="https://github.com/Evavic44/responsive-navbar-with-dropdown/blob/main/assets/images/user.jpg?raw=true"
+              width="80"
+              height="80"
+              alt="User"
+              style={{ borderRadius: "50%", marginBottom: "10px" }}
             />
-            <div>
-              <h6 style={{ margin: "0" }}>{item.name}</h6>
-              <p style={{ margin: "0", fontSize: "14px", color: "#555" }}>
-                ${item.amount.toFixed(2)}
-              </p>
-              <p style={{ margin: "0", fontSize: "12px", color: getStatusColor(item.status) }}>
-                {item.status}
-              </p>
+            <h4>Frontend Ace...</h4>
+            <p>frontendace@gmail.com</p>
+            <hr />
+            <h5>Wishlist Items: {wishlistCount}</h5>
+
+            <div className="wishlist-items">
+              {wishlistItems.map((item) => (
+                <div className="wishlist-item" key={item.id}>
+                  <img
+                    src={item.image}
+                    alt={item.name}
+                    width="50"
+                    height="50"
+                    style={{ borderRadius: "10px", objectFit: "cover", marginRight: "10px" }}
+                  />
+                  <div>
+                    <h6 style={{ margin: "0" }}>{item.name}</h6>
+                    <p style={{ margin: "0", fontSize: "14px", color: "#555" }}>
+                      ${item.amount.toFixed(2)}
+                    </p>
+                    <p style={{ margin: "0", fontSize: "12px", color: getStatusColor(item.status) }}>
+                      {item.status}
+                    </p>
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
-        ))}
-      </div>
-    </div>
-  </div>
-)}
-
+        </div>
+      )}
     </>
   );
 };

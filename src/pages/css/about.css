@@ -119,21 +119,14 @@ section {
 }
 .abt-about-btn-box a {
   padding: 15px 50px;
+  border-radius: 10px;
 }
 .abt-image-column .abt-inner-image {
   padding-left: 120px;
   padding-bottom: 125px;
   position: relative;
 }
-.abt-inner-image:before {
-  content: "";
-  position: absolute;
-  left: -75px;
-  top: 65px;
-  height: 520px;
-  /* width: 520px; */
-  background-image: url(../../images/about-circle-1.png);
-}
+
 .abt-image-1, .abt-image-2 {
   position: relative;
   

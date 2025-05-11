@@ -128,7 +128,7 @@ const About = () => {
 
       <div
         className="col-lg-6 col-md-12 col-sm-12 abt-image-column"
-        data-aos="fade-left"
+        data-aos="fade-up"
         data-aos-delay="200"
       >
         <div className="abt-inner-image">
@@ -154,13 +154,13 @@ const About = () => {
         <div className="why-choose-agile py-5">
           <div className="container">
             <div className="text-center mb-5">
-              <h3 className="heading" data-aos="fade-left" data-aos-delay={10}>
+              <h3 className="heading" data-aos="fade-up" data-aos-delay={10}>
                 <span style={{ color: "#fff" }}>
                   Why <span style={{ color: "#4CAF50" }}>Choose</span> Us
                 </span>
               </h3>
               <p
-                data-aos="fade-left"
+                data-aos="fade-up"
                 style={{ color: "#fff" }}
                 data-aos-delay={30}
               >
