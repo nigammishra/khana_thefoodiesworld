@@ -6,7 +6,7 @@ import "../../src/pages/css/recipes.css";
 import "../../src/pages/css/menu.css";
 import SocialNetworksCarousel from "../components/SocialMediaLinks";
 import Partners from "../components/Partners"; 
-import LoaderOne from "../../src/Loaders/AccountLoader";
+import LoaderOne from "../../src/Loaders/LoaderOne";
 
 
 const Menu = () => {

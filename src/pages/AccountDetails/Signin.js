@@ -4,7 +4,7 @@ import "../../pages/AccountDetails/Accountcss/signinandup.css";
 import Partners from "../../components/Partners"; 
 import AOS from "aos";
 import "aos/dist/aos.css";
-import LoaderOne from "../../Loaders/AccountLoader";
+import LoaderOne from "../../Loaders/LoaderOne";
 
 const Signin = () => {
   const [isSignUp, setIsSignUp] = useState(false);
