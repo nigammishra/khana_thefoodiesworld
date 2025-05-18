@@ -7,34 +7,35 @@ import aboutimage from "../images/about.png";
 import about2 from "../images/about-main2.png";
 import bottomimage from "../images/wht-choose-us.webp";
 import Partners from "../components/Partners";
-import Slider from "react-slick";
-import team1 from "../images/team1.jpeg";
-import team2 from "../images/team2.jpg";
-import team3 from "../images/team3.png";
+// import Slider from "react-slick";
+// import team1 from "../images/team1.jpeg";
+// import team2 from "../images/team2.jpg";
+// import team3 from "../images/team3.png";
 import LoaderOne from "../Loaders/LoaderOne";
+import TeamCarousel from "../components/Team";
 // import signature from "../images/signature.png";
-const teamData = [
-  {
-    name: "Alice Johnson",
-    achievement: "Top Chef 2022",
-    photo: team1,
-  },
-  {
-    name: "Bob Smith",
-    achievement: "Fastest Delivery 2023",
-    photo: team2,
-  },
-  {
-    name: "Catherine Lee",
-    achievement: "Customer Hero 2023",
-    photo: team3,
-  },
-  {
-    name: "David Kim",
-    achievement: "Innovation Award 2022",
-    photo: team1,
-  },
-];
+// const teamData = [
+//   {
+//     name: "Alice Johnson",
+//     achievement: "Top Chef 2022",
+//     photo: team1,
+//   },
+//   {
+//     name: "Bob Smith",
+//     achievement: "Fastest Delivery 2023",
+//     photo: team2,
+//   },
+//   {
+//     name: "Catherine Lee",
+//     achievement: "Customer Hero 2023",
+//     photo: team3,
+//   },
+//   {
+//     name: "David Kim",
+//     achievement: "Innovation Award 2022",
+//     photo: team1,
+//   },
+// ];
 
 const About = () => {
   useEffect(() => {
@@ -53,24 +54,24 @@ const About = () => {
   // If loading, show the loader
   if (loading) return <LoaderOne />;
 
-  const settings = {
-    dots: true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 3,
-    slidesToScroll: 1,
-    autoplay: true,
-    responsive: [
-      {
-        breakpoint: 768,
-        settings: { slidesToShow: 1 },
-      },
-      {
-        breakpoint: 1024,
-        settings: { slidesToShow: 2 },
-      },
-    ],
-  };
+  // const settings = {
+  //   dots: true,
+  //   infinite: true,
+  //   speed: 500,
+  //   slidesToShow: 3,
+  //   slidesToScroll: 1,
+  //   autoplay: true,
+  //   responsive: [
+  //     {
+  //       breakpoint: 768,
+  //       settings: { slidesToShow: 1 },
+  //     },
+  //     {
+  //       breakpoint: 1024,
+  //       settings: { slidesToShow: 2 },
+  //     },
+  //   ],
+  // };
 
   return (
     <>
@@ -315,9 +316,10 @@ const About = () => {
           </div>
         </div>
 
+        <TeamCarousel/>
         <Partners />
-
-        <>
+        
+        {/* <>
           <div className="py-5 bg-light">
             <h2 className="text-center mb-4">Meet Our Team</h2>
             <div className="container">
@@ -343,7 +345,7 @@ const About = () => {
               </Slider>
             </div>
           </div>
-        </>
+        </> */}
       </>
     </>
   );

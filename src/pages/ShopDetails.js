@@ -9,6 +9,7 @@ import shop2 from "../images/shop2.avif";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import LoaderOne from "../Loaders/LoaderOne";
+import TeamCarousel from "../components/Team";
 
 const projCards = [
   {
@@ -126,9 +127,11 @@ const ShopDetails = () => {
           </div>
         ))}
       </div>
-
+      
+      <TeamCarousel/>
       <SocialNetworksCarousel />
       <Partners />
+      
     </>
   );
 };
