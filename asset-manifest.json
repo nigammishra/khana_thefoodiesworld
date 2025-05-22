@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/khana_thefoodiesworld/static/css/main.62dc7d16.css",
-    "main.js": "/khana_thefoodiesworld/static/js/main.409ab413.js",
+    "main.css": "/khana_thefoodiesworld/static/css/main.945634c1.css",
+    "main.js": "/khana_thefoodiesworld/static/js/main.d50bbd1b.js",
     "static/js/453.deb8624f.chunk.js": "/khana_thefoodiesworld/static/js/453.deb8624f.chunk.js",
     "static/media/mainimagekhana.png": "/khana_thefoodiesworld/static/media/mainimagekhana.64e35304d2bfe028803a.png",
     "static/media/team3.png": "/khana_thefoodiesworld/static/media/team3.615e896d5799b4337253.png",
@@ -36,17 +36,24 @@
     "static/media/food6.avif": "/khana_thefoodiesworld/static/media/food6.f64f04ae6901b7573a7d.avif",
     "static/media/dominos.jpg": "/khana_thefoodiesworld/static/media/dominos.25e296cdf3f91db9685e.jpg",
     "static/media/mc-donalds-logo.webp": "/khana_thefoodiesworld/static/media/mc-donalds-logo.09067542fc673dbba74f.webp",
+    "static/media/american-express.svg": "/khana_thefoodiesworld/static/media/american-express.33e7f005713f6ceb212ba5b6d61421c2.svg",
+    "static/media/mastercard.svg": "/khana_thefoodiesworld/static/media/mastercard.da5e9379530b43530ae0f124da5805b5.svg",
+    "static/media/amazonpay.svg": "/khana_thefoodiesworld/static/media/amazonpay.b787303c26c60b8ab511984e1698a0c3.svg",
+    "static/media/paypal.svg": "/khana_thefoodiesworld/static/media/paypal.3aab1213537d18d5c97fbdf461fe699d.svg",
+    "static/media/discover-card.svg": "/khana_thefoodiesworld/static/media/discover-card.e0496ede610ff5044a66ba344468860c.svg",
+    "static/media/visa.svg": "/khana_thefoodiesworld/static/media/visa.23929e02ad52aa3ad90c325bb4c38891.svg",
+    "static/media/google-pay.svg": "/khana_thefoodiesworld/static/media/google-pay.af2e50c5794cfcf2326f38180c661b71.svg",
     "static/media/slick.svg": "/khana_thefoodiesworld/static/media/slick.2630a3e3eab21c607e21.svg",
     "static/media/slick.eot": "/khana_thefoodiesworld/static/media/slick.a4e97f5a2a64f0ab1323.eot",
     "index.html": "/khana_thefoodiesworld/index.html",
     "static/media/slick.ttf": "/khana_thefoodiesworld/static/media/slick.c94f7671dcc99dce43e2.ttf",
     "static/media/slick.woff": "/khana_thefoodiesworld/static/media/slick.295183786cd8a1389865.woff",
-    "main.62dc7d16.css.map": "/khana_thefoodiesworld/static/css/main.62dc7d16.css.map",
-    "main.409ab413.js.map": "/khana_thefoodiesworld/static/js/main.409ab413.js.map",
+    "main.945634c1.css.map": "/khana_thefoodiesworld/static/css/main.945634c1.css.map",
+    "main.d50bbd1b.js.map": "/khana_thefoodiesworld/static/js/main.d50bbd1b.js.map",
     "453.deb8624f.chunk.js.map": "/khana_thefoodiesworld/static/js/453.deb8624f.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.62dc7d16.css",
-    "static/js/main.409ab413.js"
+    "static/css/main.945634c1.css",
+    "static/js/main.d50bbd1b.js"
   ]
 }
