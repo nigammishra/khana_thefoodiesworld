@@ -1,0 +1,81 @@
+.settings-container {
+  max-width: 900px;
+  margin: 50px auto;
+  padding: 30px;
+  background: linear-gradient(to right, #a8edea, #fed6e3);
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  font-family: "Segoe UI", sans-serif;
+  transition: all 0.3s ease;
+}
+
+.settings-title {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 30px;
+  text-align: center;
+  color: #ff7e00;
+}
+
+.setting-card {
+  background: #fff5e1;
+  border-radius: 12px;
+  padding: 25px;
+  margin-bottom: 30px;
+  transition: transform 0.4s ease;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.card-title {
+  font-size: 20px;
+  font-weight: bold;
+  color: #ff6600;
+  margin-bottom: 20px;
+}
+
+.setting-row {
+  margin-bottom: 15px;
+}
+
+.setting-label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #444;
+}
+
+.setting-display {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.setting-input {
+  padding: 8px 12px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  width: 100%;
+}
+
+.btn-edit,
+.btn-save,
+.btn-cancel {
+  margin-top: 10px;
+  margin-right: 10px;
+  padding: 8px 14px;
+  font-size: 14px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  background: #ff6600;
+  color: white;
+  transition: transform 0.2s, background 0.3s;
+}
+
+.btn-edit:hover,
+.btn-save:hover,
+.btn-cancel:hover {
+  transform: scale(1.05);
+  background: #e65c00;
+}
