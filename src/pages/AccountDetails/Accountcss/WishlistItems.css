@@ -1,0 +1,143 @@
+.wishlist-container {
+  font-family: 'Poppins', sans-serif;
+  background: #fff8f0;
+  padding-bottom: 50px;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #ff5722;
+  animation: fadeInDown 1s ease-out;
+}
+
+.section-description {
+  font-size: 1.2rem;
+  color: #444;
+  animation: fadeIn 1.2s ease-in-out;
+}
+
+.section-note {
+  font-size: 1rem;
+  color: #888;
+}
+
+.wishlist-link {
+  color: #ff5722;
+  text-decoration: underline;
+  transition: color 0.3s;
+}
+
+.wishlist-link:hover {
+  color: #e64a19;
+}
+
+
+/* .inner-page-banner-area {
+  background: linear-gradient(to right, #ff512f, #f09819);
+  padding: 60px 0;
+  color: white;
+  text-align: center;
+  animation: fadeInDown 1s ease-out;
+} */
+
+.wishlist-heading {
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+/* .breadcrumb {
+  list-style: none;
+  display: inline-flex;
+  gap: 10px;
+  font-size: 16px;
+  padding: 0;
+  animation: fadeInUp 1s ease-out;
+}
+
+.breadcrumb li a {
+  color: white;
+  text-decoration: none;
+}
+
+.breadcrumb li {
+  color: #f5f5f5;
+} */
+
+.wishlist-table-area {
+  margin-top: 40px;
+  animation: fadeIn 1.2s ease-in-out;
+}
+
+.wishlist-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.wishlist-table th, .wishlist-table td {
+  padding: 15px 20px;
+  text-align: center;
+  border-bottom: 1px solid #eee;
+}
+
+.wishlist-table th {
+  background-color: #ffe0b2;
+  color: #333;
+  font-weight: 600;
+}
+
+.wishlist-row:hover {
+  background-color: #fff3e0;
+  transition: 0.3s;
+}
+
+.remove-btn {
+  background-color: #ff7043;
+  border: none;
+  color: white;
+  padding: 8px 15px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.remove-btn:hover {
+  background-color: #d84315;
+}
+
+/* Animations */
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
