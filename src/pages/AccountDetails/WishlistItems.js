@@ -44,31 +44,34 @@ const WishlistItems = () => {
 
       {/* Wishlist Table */}
       <div className="wishlist-table-area container">
-        <table className="wishlist-table">
-          <thead>
-            <tr>
-              <th>#</th>
-              <th>Dish Name</th>
-              <th>Category</th>
-              <th>Price</th>
-              <th>Action</th>
-            </tr>
-          </thead>
-          <tbody>
-            {wishlist.map((item, index) => (
-              <tr key={item.id} className="wishlist-row">
-                <td>{index + 1}</td>
-                <td>{item.name}</td>
-                <td>{item.category}</td>
-                <td>{item.price}</td>
-                <td>
-                  <button className="remove-btn">Remove</button>
-                </td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
-      </div>
+  <div className="table-responsive">
+    <table className="wishlist-table">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Dish Name</th>
+          <th>Category</th>
+          <th>Price</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        {wishlist.map((item, index) => (
+          <tr key={item.id} className="wishlist-row">
+            <td>{index + 1}</td>
+            <td>{item.name}</td>
+            <td>{item.category}</td>
+            <td>{item.price}</td>
+            <td>
+              <button className="remove-btn">Remove</button>
+            </td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
+  </div>
+</div>
+
     </div>
   );
 };

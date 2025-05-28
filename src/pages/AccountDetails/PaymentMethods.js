@@ -305,65 +305,73 @@ const PaymentMethods = () => {
         </div>
 
         {/* List of saved payment methods */}
-        <div className="pm-saved-methods" style={{ marginTop: "30px" }}>
-          <h3>Saved Payment Methods</h3>
-          {methods.length === 0 && <p>No payment methods saved.</p>}
-          <ul style={{ listStyle: "none", padding: 0 }}>
-            <AnimatePresence>
-              {methods.map((method) => (
-                <motion.li
-                  key={method.id}
-                  style={{
-                    display: "flex",
-                    alignItems: "center",
-                    marginBottom: "10px",
-                    border: "1px solid #ddd",
-                    padding: "10px",
-                    borderRadius: "5px",
-                  }}
-                  variants={listItemVariants}
-                  initial="hidden"
-                  animate="visible"
-                  exit="exit"
-                  layout
-                >
-                  <img
-                    src={paymentMethodLogos[method.type]}
-                    alt={method.type}
-                    style={{ width: "50px", marginRight: "10px" }}
-                  />
-                  <div style={{ flexGrow: 1 }}>
-                    {["Visa", "MasterCard", "AmEx", "Discover"].includes(
-                      method.type
-                    ) ? (
-                      <>
-                        <strong>{method.type}</strong> ending in {method.last4} | Expiry:{" "}
-                        {method.expiry}
-                      </>
-                    ) : (
-                      <>
-                        <strong>{method.type}</strong> | Email: {method.email}
-                      </>
-                    )}
-                  </div>
-                  <button
-                    onClick={() => removeMethod(method.id)}
-                    style={{
-                      background: "red",
-                      color: "white",
-                      border: "none",
-                      padding: "5px 10px",
-                      cursor: "pointer",
-                      borderRadius: "3px",
-                    }}
-                  >
-                    Remove
-                  </button>
-                </motion.li>
-              ))}
-            </AnimatePresence>
-          </ul>
-        </div>
+        <div className="pm-saved-methods container" style={{ marginTop: "30px" }}>
+  <h3>Saved Payment Methods</h3>
+  {methods.length === 0 && <p>No payment methods saved.</p>}
+
+  <ul style={{ listStyle: "none", padding: 0 }}>
+    <AnimatePresence>
+      {methods.map((method) => (
+        <motion.li
+          key={method.id}
+          className="row"
+          style={{
+            display: "flex",
+            alignItems: "center",
+            marginBottom: "10px",
+            border: "1px solid #ddd",
+            padding: "10px",
+            borderRadius: "5px",
+            flexWrap: "wrap", // Important for small screens
+          }}
+          variants={listItemVariants}
+          initial="hidden"
+          animate="visible"
+          exit="exit"
+          layout
+        >
+          <div className="col-12 col-sm-auto d-flex align-items-center mb-2 mb-sm-0">
+            <img
+              src={paymentMethodLogos[method.type]}
+              alt={method.type}
+              style={{ width: "50px", marginRight: "10px" }}
+            />
+          </div>
+
+          <div className="col-12 col-sm flex-grow-1 mb-2 mb-sm-0">
+            {["Visa", "MasterCard", "AmEx", "Discover"].includes(method.type) ? (
+              <>
+                <strong>{method.type}</strong> ending in {method.last4} | Expiry: {method.expiry}
+              </>
+            ) : (
+              <>
+                <strong>{method.type}</strong> | Email: {method.email}
+              </>
+            )}
+          </div>
+
+          <div className="col-12 col-sm-auto text-sm-end">
+            <button
+              onClick={() => removeMethod(method.id)}
+              style={{
+                background: "red",
+                color: "white",
+                border: "none",
+                padding: "5px 10px",
+                cursor: "pointer",
+                borderRadius: "3px",
+                width: "100%", // Makes it full-width on small screens
+              }}
+            >
+              Remove
+            </button>
+          </div>
+        </motion.li>
+      ))}
+    </AnimatePresence>
+  </ul>
+</div>
+
       </section>
     </>
   );
