@@ -21,7 +21,7 @@ const Footer = () => {
           <div className="row">
             <div className="col-xl-4 col-md-4 mb-30">
               <div className="single-cta">
-                <FaMapMarkerAlt size={30} color="#46b340" />
+                <FaMapMarkerAlt size={30} style={{marginTop:"-30px"}} color="#46b340" />
                 <div className="cta-text">
                   <h4>Find us</h4>
                   <span> Bhubaneswar, odisha</span>
@@ -30,7 +30,7 @@ const Footer = () => {
             </div>
             <div className="col-xl-4 col-md-4 mb-30">
               <div className="single-cta">
-                <FaPhone size={30} color="#46b340" />
+                <FaPhone size={30} style={{marginTop:"-30px"}} color="#46b340" />
                 <div className="cta-text">
                   <h4>Call us</h4>
                   <span>8260821103</span>
@@ -39,7 +39,7 @@ const Footer = () => {
             </div>
             <div className="col-xl-4 col-md-4 mb-30">
               <div className="single-cta">
-                <FaEnvelopeOpen size={30} color="#46b340" />
+                <FaEnvelopeOpen size={30} style={{marginTop:"-30px"}} color="#46b340" />
                 <div className="cta-text">
                   <h4>Mail us</h4>
                   <span>frontendace@info.com</span>
